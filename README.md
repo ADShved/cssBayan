@@ -1,2 +1,2 @@
 # cssBayan  
-https://ADShved.github.io/cssBayan/cssBayan/index.html
+https://adshved.github.io/cssBayan/cssBayan/index.html
