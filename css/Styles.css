@@ -31,6 +31,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    cursor: pointer;
 }
 .accordion-input{
     display: none;
@@ -47,13 +48,10 @@ body{
     height: 0px;
     transition: .5s;
 }
-.accordion-input:checked ~ .box_img {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 40vh;
-}
-.accordion_label:hover ~ .box_img  {
+.accordion-input:checked ~ .box_img,
+.accordion_label:hover ~ .box_img,
+.box_img:hover{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -65,10 +63,16 @@ body{
     border-style: solid;
     border-width: 8px 5px 0 5px;
     border-color: #f8f8f8 transparent transparent transparent;
+    opacity: 0;
+    transition: .5s;
 }
-.accordion-input:checked ~  .accordion_label .arrow{
+.accordion:hover .accordion_item .accordion_label .arrow{
+    opacity: 1;
+}
+.accordion-input:checked ~  .accordion_label .arrow,
+.accordion-input:hover ~  .accordion_label .arrow{
     transform: rotate(180deg);
 }
-.accordion-input:hover + .accordion_label .arrow{
+.accordion_item:hover  .arrow{
     transform: rotate(180deg);
 }
